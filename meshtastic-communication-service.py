@@ -66,8 +66,14 @@ class MeshBot:
                 if "bot: status" in text_content.lower():
                     self.send_dm(sender_id, f"Status: Online and listening :3")
 
+                if "bot: kofi" in text_content.lower():
+                    self.send_dm(sender_id, f"Support the Lousiana Mesh Community and get some cute stickers here: https://ko-fi.com/louisianameshcommunity/shop")
+
                 if "bot: help" in text_content.lower():
-                    self.send_dm(sender_id, f"Hello, This bot is provided by the Louisiana Mesh Community \n \n Commands: \n \n - bot: status \n - bot: help \n - bot: discord \n - bot: weather \n - bot: weather help \n - bot: sms (dm's only) \n - bot: sms help (dm's only)")
+                    time.sleep(3)
+                    self.send_dm(sender_id, f"Hello, This bot is provided by the Louisiana Mesh Community")
+                    time.sleep(3)
+                    self.send_dm(sender_id, f"Commands: \n \n - bot: status \n - bot: help \n - bot: discord \n - bot: kofi \n - bot: weather \n - bot: weather help \n - bot: sms (dm's only) \n - bot: sms help (dm's only)")
                     time.sleep(5)
                     self.send_dm(sender_id, f"This bot is still a work in progess, all commands can be sent to either DM or main channel, if you have any bugs please send them in the discord >~<")
 
@@ -213,7 +219,10 @@ class MeshBot:
             if not is_dm:
 
                 if "bot: help" in text_content.lower():
-                    self.send_broadcast(f"Hello, This bot is provided by the Louisiana Mesh Community \n \n Commands: \n \n - bot: status \n - bot: help \n - bot: discord \n - bot: weather \n - bot: weather help \n - bot: sms (dm's only) \n - bot: sms help (dm's only)")
+                    tine.sleep(3)
+                    self.send_broadcast(f"Hello, This bot is provided by the Louisiana Mesh Community")
+                    time.sleep(3)
+                    self.send_broadcast(f"Commands: \n \n - bot: status \n - bot: help \n - bot: discord \n - bot: kofi \n - bot: weather \n - bot: weather help \n - bot: sms (dm's only) \n - bot: sms help (dm's only)")
                     time.sleep(5)
                     self.send_broadcast(f"This bot is still a work in progess, all commands can be sent to either DM or main channel, if you have any bugs please send them in the discord >~<")
 
@@ -228,8 +237,11 @@ class MeshBot:
 
                 if "bot: sms" in text_content.lower():
                     self.send_broadcast(f"SMS commands can only be used in DM's")
+
+                if "bot: kofi" in text_content.lower():
+                    self.send_broadcast(f"Support the Lousiana Mesh Community and get some cute stickers here: https://ko-fi.com/louisianameshcommunity/shop")
                     
-                if "good girl" == text_content.lower():
+                if "good girl ><" == text_content.lower():
                     self.send_broadcast("aw, ty >~<")
 
                 if ":3" in text_content.lower():
