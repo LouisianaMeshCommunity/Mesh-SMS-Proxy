@@ -138,6 +138,12 @@ def send_email():
         recipient = f"{phone_number}@txt.att.net" # Assuming 'att' prefix was a typo
     elif celluar_provider.lower() == "google-fi":
         recipient = f"{phone_number}@msg.fi.google.com"
+    elif celluar_provider.lower() == "verizon":
+        recipient = f"{phone_number}@vtext.com"
+    elif celluar_provider.lower() == "t-mobile" or celluar_provider.lower() == "tmobile":
+        recipient = f"{phone_number}@tmomail.net"
+    elif celluar_provider.lower() == "consumer-cellular" or celluar_provider.lower() == "consumercellular":
+        recipient = f"{phone_number}@mailmymobile.net"
     else:
         return jsonify({"error": f"Unknown cellular provider"}), 400 
 
